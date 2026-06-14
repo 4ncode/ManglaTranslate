@@ -1,0 +1,8 @@
+fastapi==0.104.1
+unicorn[standard]==0.24.0
+python-multipart==0.0.6
+opencv-python==4.8.1.78
+Pillow==10.1.0
+easyocr==1.7.0
+numpy==1.26.2
+pytesseract==0.3.10

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangaTleX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MangaTleX</h1>
+            <p>Translate your manga images with ease!</p>
+        </header>
+
+        <main> 
+            <div class="upload-box" id="dropZone">
+                <div class="upload-icon">🖼️</div>
+                <p>Drop your manga images here or <span> Click to browse </span> </p>
+                <small> PNG, JPG, JPEG, WEBP, BMP </small>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing your images...</p>
+                <small> This may take a few moments depending on the number of images. </small>
+            </div>
+
+            <div class="results" id="results" style="display: none;">
+                <div class="preview-section">
+                    <h3> Translated Results </h3>
+                    <div class="image-wrapper">
+                        <img id="previewImage" alt="Translated Manga Image">                    </div>
+                </div>
+                <p class="hint">Your translated manga images will appear here.</p>
+            </div>
+
+            <div class="full-text-section">
+                <div class="section-header">
+                    <h3>Full Text</h3>
+                    <button class="btn btn-copy" id="copyAllBtn">
+                        🖼️ copy all
+                    </button>
+                    <textarea id="fullText" readonly rows="6"></textarea>
+                </div>
+
+                <div class="lines-section ">
+                    <h3>Lines to translate</h3>
+                    <p class="hint">Click "Copy" to copy the text for translation.</p>
+                    <div class="lines-list" id="LinesList"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>MangaTleX v1.0 Scan - Copy - Translate</p>
+        </footer>
+
+        <div class="toast" id="toast" style="display: none;">
+            <span class="toastText">Copied!</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

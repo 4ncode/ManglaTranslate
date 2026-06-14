@@ -1,0 +1,2 @@
+# ManglaTranslate
+MangaTleX
